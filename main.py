@@ -4,7 +4,7 @@ from config import token
 
 bot = telebot.TeleBot(token)
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start', 'help'])
 def welcome(message):
     bot.send_message(message.chat.id, """\
     Привет! Я бот, который поможет тебе заботиться о природе. Используй /advice для получения советов. 
